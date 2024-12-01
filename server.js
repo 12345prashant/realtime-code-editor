@@ -14,7 +14,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-      origin: "https://realtime-code-editor-dyoa6kuyq.vercel.app/", // Replace with your Vercel frontend URL
+      origin: "https://realtime-code-editor-6gx61n2ba.vercel.app/", // Replace with your Vercel frontend URL
       methods: ["GET", "POST"],
       allowedHeaders: ["my-custom-header"],
       credentials: true,
