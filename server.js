@@ -10,16 +10,16 @@ const path = require('path');
 const server = http.createServer(app);
 
 // 1 change , also change .env or view package.json
-// const io = new Server(server);
+const io = new Server(server);
 
-const io = new Server(server, {
-    cors: {
-      origin: "https://realtime-code-editor-6gx61n2ba.vercel.app/", // Replace with your Vercel frontend URL
-      methods: ["GET", "POST"],
-      allowedHeaders: ["my-custom-header"],
-      credentials: true,
-    },
-  });
+// const io = new Server(server, {
+//     cors: {
+//       origin: "https://realtime-code-editor-6gx61n2ba.vercel.app/", // Replace with your Vercel frontend URL
+//       methods: ["GET", "POST"],
+//       allowedHeaders: ["my-custom-header"],
+//       credentials: true,
+//     },
+//   });
 
 
 
