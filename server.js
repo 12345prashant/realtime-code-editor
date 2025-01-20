@@ -139,6 +139,12 @@ io.on('connection', (socket)=>{
             console.error("Invalid socketId:", socketId);
           }
     })
+
+    socket.on('cursor_move', ({ roomId, socketId, username, position }) => {
+        socket.to(roomId).emit('update_cursor', { socketId, username, position });
+      });
+
+      
     socket.on('disconnecting', ()=>{
         // finding all the rooms in which current socket is connected
         const rooms = [...socket.rooms];

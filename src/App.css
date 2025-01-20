@@ -142,27 +142,23 @@ footer a:hover {
   padding-top: 20px;
   height: auto; overflow: auto; max-height: 250px; 
 }
-
-.cursor-marker-UserA {
-  border-left: 2px solid red; /* A red line to represent User A's cursor */
-  animation: blink-cursor 1s steps(2, start) infinite;
+.cursor-highlight {
+  background-color: rgba(255, 255, 0, 0.5); /* Highlight color */
+  position: relative;
 }
 
-.selection-marker-UserA {
-  background-color: rgba(255, 0, 0, 0.3); /* Semi-transparent red */
+.cursor-highlight::after {
+  content: attr(title); /* Display the username */
+  position: absolute;
+  top: -1.5em;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
-.cursor-marker-UserB {
-  border-left: 2px solid blue; /* A blue line for User B */
-  animation: blink-cursor 1s steps(2, start) infinite;
-}
 
-.selection-marker-UserB {
-  background-color: rgba(0, 0, 255, 0.3); /* Semi-transparent blue */
-}
-
-@keyframes blink-cursor {
-  50% {
-      opacity: 0;
-  }
-}

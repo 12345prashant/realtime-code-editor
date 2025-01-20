@@ -326,6 +326,7 @@ function grantPersonalRequest(socketId){
     isEditOn={isediton}
     ishost={ishost}
     ispersonalEdit = {personalEdit}
+    username = {location.state?.username}
     // What does onCodeChange do?
         // The issue is that when the new user joins he will see a empty code editor ,
         // the actual code is present in editor.js, 
